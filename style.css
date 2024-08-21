@@ -1,0 +1,142 @@
+#root {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#computer-score-container,
+#user-score-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 210px;
+  height: 190px;
+  max-width: 210px;
+  max-height: 190px;
+  font-size: 17px;
+  padding: 1% !important;
+}
+
+#user-score,
+#computer-score {
+  font-size: 68px;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Game Diagram */
+.game-container {
+  z-index: 1;
+}
+
+.rock,
+.scissor,
+.paper {
+  cursor: pointer;
+  position: relative;
+  border: 10px solid;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  padding: 20px;
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 10%,
+    rgb(255, 255, 255) 20%,
+    rgb(167, 167, 167) 100%
+  );
+}
+.rock {
+  border-color: #0074b6;
+}
+.paper {
+  border-color: #ffa943;
+}
+.scissor {
+  border-color: #bd00ff;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 200px;
+  background-color: black;
+  position: absolute;
+  height: 10px;
+  border-radius: 100px;
+}
+
+.line1 {
+  position: absolute;
+  /* top: 200px; */
+  bottom: 50%;
+  left: 45%;
+  z-index: 0;
+}
+
+.line2 {
+  position: absolute;
+  bottom: 30%;
+  right: 50%;
+  transform: rotate(120deg);
+  z-index: 0;
+  transform-origin: right;
+}
+
+.line3 {
+  position: absolute;
+  bottom: 30%;
+  right: 50%;
+  transform: rotate(55deg);
+  z-index: 0;
+  transform-origin: right;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  width: 278px;
+  height: 325px;
+  border: 5px solid white;
+  background-color: #004429;
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  font-size: 13px;
+}
+
+.rules-list {
+  list-style-type: square;
+}
+
+.rules-list > li::marker {
+  color: #ffd600;
+}
+.close-btn {
+  position: absolute;
+  top: 45%;
+  right: 8%;
+  z-index: 1;
+}
+
+.rules-btn {
+  /* position: absolute;
+  right: 5%;
+  bottom: 5%; */
+  padding: 0.5% 2% 0.5% 2%;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.bottom-btns-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
